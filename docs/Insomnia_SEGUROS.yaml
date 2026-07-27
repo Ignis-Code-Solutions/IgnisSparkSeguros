@@ -1,0 +1,1191 @@
+type: spec.insomnia.rest/5.0
+schema_version: "5.1"
+name: OpenAPI definition v0
+meta:
+  id: wrk_f4a449def6b6459b98299e790d99a741
+  created: 1785170895373
+  modified: 1785170895373
+  description: ""
+collection:
+  - name: Usuários
+    meta:
+      id: fld_fd36b7d037a84e279a43197c841950b0
+      created: 1785170895389
+      modified: 1785170895389
+      sortKey: -1785170895389
+      description: Endpoints para gerenciamento de usuários
+    children:
+      - url: "{{ _.base_url }}/usuarios"
+        name: /usuarios
+        meta:
+          id: req_d768276cbe2d4a3e947ce7fe551ec85f
+          created: 1785170895406
+          modified: 1785171415741
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895406
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/usuarios"
+        name: /usuarios
+        meta:
+          id: req_6a198c41ec8f439fa3e3a45c8e590d8a
+          created: 1785170895410
+          modified: 1785170895410
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895410
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 0,
+              "nome": "string",
+              "usuario": "string",
+              "senha": "string",
+              "foto": "string",
+              "tipo": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/usuarios"
+        name: /usuarios
+        meta:
+          id: req_e4a596aad3ad40a8889a3627de1d9e01
+          created: 1785170895412
+          modified: 1785171432029
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895412
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "José Maria",
+              "usuario": "josemaria@email.com",
+              "senha": "12345678",
+              "foto": "null",
+              "tipo": "CORRETOR"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/usuarios/autenticar"
+        name: /usuarios/autenticar
+        meta:
+          id: req_a865423e26c347bdbb23b756c387a53a
+          created: 1785170895424
+          modified: 1785170895424
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895424
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 0,
+              "nome": "string",
+              "usuario": "string",
+              "senha": "string",
+              "foto": "string",
+              "tipo": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/usuarios/:id"
+        name: /usuarios/{id}
+        meta:
+          id: req_8bc33d62e88b4ab086d65e544bf8860f
+          created: 1785170895430
+          modified: 1785170895430
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895430
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/usuarios/:id"
+        name: /usuarios/{id}
+        meta:
+          id: req_a6774290b44f41a1bf94d8db66cc3b84
+          created: 1785170895432
+          modified: 1785170895432
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895432
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/usuarios/nome/:nome"
+        name: /usuarios/nome/{nome}
+        meta:
+          id: req_003ef7ebfa0846a8b2c95e6a3fae2dc1
+          created: 1785170895435
+          modified: 1785170895435
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895435
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Veículos
+    meta:
+      id: fld_b7d2003027634f4e9dc3eafed434e2f1
+      created: 1785170895390
+      modified: 1785170895390
+      sortKey: -1785170895390
+      description: Endpoints para gerenciamento de veículos
+    children:
+      - url: "{{ _.base_url }}/veiculos"
+        name: /veiculos
+        meta:
+          id: req_6a7b97beaa1e4c6688b9ef63e0441295
+          created: 1785170895401
+          modified: 1785170895401
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895401
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/veiculos"
+        name: /veiculos
+        meta:
+          id: req_5f102ca28d6a49f88173b351a054ff3f
+          created: 1785170895403
+          modified: 1785170895403
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895403
+        method: PUT
+        body:
+          mimeType: application/json
+          text: "null"
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/veiculos"
+        name: /veiculos
+        meta:
+          id: req_aa526dcc66d14c1da5ac390d89ce3e1b
+          created: 1785170895404
+          modified: 1785172002974
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895404
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "tipo": "Carro",
+              "marca": "Renault",
+              "modelo": "Duster",
+              "anoFabricacao": 2013,
+              "placa": "ABC1D23",
+              "valorTabela": 45000.00,
+              "cliente": {
+                "id": 1
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/veiculos/:id"
+        name: /veiculos/{id}
+        meta:
+          id: req_77368c119cb24af1a9a92e2f42c9ea8a
+          created: 1785170895426
+          modified: 1785170895426
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895426
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/veiculos/:id"
+        name: /veiculos/{id}
+        meta:
+          id: req_551b41d446ad44d18d44e8f8279c8686
+          created: 1785170895428
+          modified: 1785170895428
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895428
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_e2b5ad880635496a9becabf16334700c
+      created: 1785170895395
+      modified: 1785170895395
+      sortKey: -1785170895395
+      description: Endpoints para gerenciamento de clientes
+    children:
+      - url: "{{ _.base_url }}/clientes"
+        name: /clientes
+        meta:
+          id: req_893db93377a343fbb3ff01e157ffca76
+          created: 1785170895414
+          modified: 1785170895414
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895414
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/clientes"
+        name: /clientes
+        meta:
+          id: req_98a5d464bbce45209739b6453fff9fe4
+          created: 1785170895416
+          modified: 1785170895416
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895416
+        method: PUT
+        body:
+          mimeType: application/json
+          text: "null"
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/clientes"
+        name: /clientes
+        meta:
+          id: req_adaf2cedce5f4ae2b0536e42b57b8cfe
+          created: 1785170895417
+          modified: 1785172151673
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895417
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "João Silva",
+              "cpf": "12345678901",
+              "data_nascimento": "1990-05-15",
+              "telefone": "11999998888",
+              "email": "joao@email.com",
+              "endereco": "Rua Exemplo, 123",
+              "usuario": {
+                "id": 1
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/clientes/:id"
+        name: /clientes/{id}
+        meta:
+          id: req_8567d1cfc5384dd0a9fea514b9112ee4
+          created: 1785170895436
+          modified: 1785170895436
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895436
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/clientes/:id"
+        name: /clientes/{id}
+        meta:
+          id: req_ec4601cdd27c4f23b23cff9580413f5c
+          created: 1785170895437
+          modified: 1785170895437
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895437
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/clientes/nome/:nome"
+        name: /clientes/nome/{nome}
+        meta:
+          id: req_2f2f17848c6346e4a9eefc126838ad0d
+          created: 1785170895438
+          modified: 1785170895438
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895438
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/clientes/cpf/:cpf"
+        name: /clientes/cpf/{cpf}
+        meta:
+          id: req_5a9ba931d4fc45039700b2f7b0f13b8a
+          created: 1785170895439
+          modified: 1785170895439
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895439
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Apólices
+    meta:
+      id: fld_69fbe188546f41038ca6f1c19bdd46ba
+      created: 1785170895398
+      modified: 1785170895398
+      sortKey: -1785170895398
+      description: Endpoints para gerenciamento de apólices
+    children:
+      - url: "{{ _.base_url }}/apolices"
+        name: /apolices
+        meta:
+          id: req_93ba1cf17b434b6e940e207b7079f25b
+          created: 1785170895420
+          modified: 1785170895420
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895420
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/apolices"
+        name: /apolices
+        meta:
+          id: req_8ea173c6fe704a11b4bf992e5beed918
+          created: 1785170895421
+          modified: 1785170895421
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895421
+        method: PUT
+        body:
+          mimeType: application/json
+          text: "null"
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/apolices"
+        name: /apolices
+        meta:
+          id: req_f851414dd4964bb78a5b0503133a7f13
+          created: 1785170895422
+          modified: 1785173051627
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895422
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "numeroApolice": "AP-2026-0002",
+              "dataInicio": "2026-07-27",
+              "dataFim": "2027-07-27",
+              "tipoCobertura": "Completa",
+              "valorSeguro": 2500.50,
+              "status": "Ativo",
+              "cliente": {
+                "id": 1
+              },
+              "veiculo": {
+                "id": 2
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/apolices/:id"
+        name: /apolices/{id}
+        meta:
+          id: req_2062bf9b766e43fa8f3941623c87e2b9
+          created: 1785170895441
+          modified: 1785170895441
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895441
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/apolices/1"
+        name: /apolices/{id}
+        meta:
+          id: req_c1fd128687cb49eba374c218b32d0f7a
+          created: 1785170895443
+          modified: 1785171110372
+          isPrivate: false
+          description: ""
+          sortKey: -1785170895443
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e2564e4fde9ce33cf53c8915c46d57b687e8580e
+    created: 1785170895578
+    modified: 1785170895578
+environments:
+  name: Base environment
+  meta:
+    id: env_f5e97fde563c4131b74400d97f0ccbbb
+    created: 1785170895380
+    modified: 1785170895380
+    isPrivate: false
+  data:
+    base_url: "{{ _.scheme }}://{{ _.host }}{{ _.base_path }}"
+  subEnvironments:
+    - name: OpenAPI env localhost:8080
+      meta:
+        id: env_31fb3af0f31d4320a38689a550b4aa5e
+        created: 1785170895387
+        modified: 1785170895387
+        isPrivate: false
+        sortKey: 1785170895387
+      data:
+        scheme: http
+        base_path: ""
+        host: localhost:8080
+spec:
+  contents:
+    openapi: 3.0.1
+    info:
+      title: OpenAPI definition
+      version: v0
+    servers:
+      - url: http://localhost:8080
+        description: Generated server url
+    tags:
+      - name: Usuários
+        description: Endpoints para gerenciamento de usuários
+      - name: Veículos
+        description: Endpoints para gerenciamento de veículos
+      - name: Clientes
+        description: Endpoints para gerenciamento de clientes
+      - name: Apólices
+        description: Endpoints para gerenciamento de apólices
+    paths:
+      /veiculos:
+        get:
+          tags:
+            - Veículos
+          operationId: getAll
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Veiculo"
+        put:
+          tags:
+            - Veículos
+          operationId: put
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Veiculo"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Veiculo"
+        post:
+          tags:
+            - Veículos
+          operationId: post
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Veiculo"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Veiculo"
+      /usuarios:
+        get:
+          tags:
+            - Usuários
+          operationId: getAll_1
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Usuario"
+        put:
+          tags:
+            - Usuários
+          operationId: put_1
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Usuario"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Usuario"
+        post:
+          tags:
+            - Usuários
+          operationId: post_1
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Usuario"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Usuario"
+      /clientes:
+        get:
+          tags:
+            - Clientes
+          operationId: getAll_2
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Cliente"
+        put:
+          tags:
+            - Clientes
+          operationId: put_2
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Cliente"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Cliente"
+        post:
+          tags:
+            - Clientes
+          operationId: post_2
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Cliente"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Cliente"
+      /apolices:
+        get:
+          tags:
+            - Apólices
+          operationId: getAll_3
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Apolice"
+        put:
+          tags:
+            - Apólices
+          operationId: put_3
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Apolice"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Apolice"
+        post:
+          tags:
+            - Apólices
+          operationId: post_3
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Apolice"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Apolice"
+      /usuarios/autenticar:
+        post:
+          tags:
+            - Usuários
+          operationId: logarSemSeguranca
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Usuario"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: object
+      /veiculos/{id}:
+        get:
+          tags:
+            - Veículos
+          operationId: getById
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Veiculo"
+        delete:
+          tags:
+            - Veículos
+          operationId: delete
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "200":
+              description: OK
+      /usuarios/{id}:
+        get:
+          tags:
+            - Usuários
+          operationId: getById_1
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Usuario"
+        delete:
+          tags:
+            - Usuários
+          operationId: delete_1
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "204":
+              description: No Content
+      /usuarios/nome/{nome}:
+        get:
+          tags:
+            - Usuários
+          operationId: getByNome
+          parameters:
+            - name: nome
+              in: path
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Usuario"
+      /clientes/{id}:
+        get:
+          tags:
+            - Clientes
+          operationId: getById_2
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Cliente"
+        delete:
+          tags:
+            - Clientes
+          operationId: delete_2
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "204":
+              description: No Content
+      /clientes/nome/{nome}:
+        get:
+          tags:
+            - Clientes
+          operationId: getAllByCPF
+          parameters:
+            - name: nome
+              in: path
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Cliente"
+      /clientes/cpf/{cpf}:
+        get:
+          tags:
+            - Clientes
+          operationId: getAllByNome
+          parameters:
+            - name: cpf
+              in: path
+              required: true
+              schema:
+                type: string
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Cliente"
+      /apolices/{id}:
+        get:
+          tags:
+            - Apólices
+          operationId: getById_3
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    $ref: "#/components/schemas/Apolice"
+        delete:
+          tags:
+            - Apólices
+          operationId: delete_3
+          parameters:
+            - name: id
+              in: path
+              required: true
+              schema:
+                type: integer
+                format: int64
+          responses:
+            "200":
+              description: OK
+              content:
+                "*/*":
+                  schema:
+                    type: object
+    components:
+      schemas:
+        Apolice:
+          required:
+            - dataFim
+            - dataInicio
+            - numeroApolice
+            - status
+            - tipoCobertura
+            - valorSeguro
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+            numeroApolice:
+              maxLength: 30
+              minLength: 0
+              type: string
+            dataInicio:
+              type: string
+              format: date
+            dataFim:
+              type: string
+              format: date
+            tipoCobertura:
+              type: string
+            valorSeguro:
+              type: number
+            status:
+              type: string
+            veiculo:
+              $ref: "#/components/schemas/Veiculo"
+        Cliente:
+          required:
+            - cpf
+            - data_nascimento
+            - email
+            - endereco
+            - nome
+            - telefone
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+            nome:
+              maxLength: 255
+              minLength: 5
+              type: string
+            cpf:
+              maxLength: 14
+              minLength: 11
+              type: string
+            data_nascimento:
+              type: string
+              format: date
+            telefone:
+              maxLength: 15
+              minLength: 11
+              type: string
+            email:
+              type: string
+            endereco:
+              maxLength: 255
+              minLength: 10
+              type: string
+            usuario:
+              $ref: "#/components/schemas/Usuario"
+            apolice:
+              type: array
+              items:
+                $ref: "#/components/schemas/Apolice"
+            veiculo:
+              type: array
+              items:
+                $ref: "#/components/schemas/Veiculo"
+        Usuario:
+          required:
+            - nome
+            - senha
+            - usuario
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+            nome:
+              maxLength: 100
+              minLength: 3
+              type: string
+            usuario:
+              type: string
+            senha:
+              maxLength: 2147483647
+              minLength: 8
+              type: string
+            foto:
+              maxLength: 5000
+              minLength: 0
+              type: string
+            tipo:
+              type: string
+        Veiculo:
+          required:
+            - anoFabricacao
+            - marca
+            - modelo
+            - tipo
+            - valorTabela
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+            tipo:
+              maxLength: 30
+              minLength: 0
+              type: string
+            marca:
+              maxLength: 50
+              minLength: 0
+              type: string
+            modelo:
+              maxLength: 50
+              minLength: 0
+              type: string
+            anoFabricacao:
+              maximum: 2100
+              minimum: 1900
+              type: integer
+              format: int32
+            placa:
+              maxLength: 10
+              minLength: 0
+              type: string
+            valorTabela:
+              type: number
+            cliente:
+              $ref: "#/components/schemas/Cliente"
+  meta:
+    id: spc_3ae6119f022249bf8b9694dd26117a01
+    created: 1785170895376
+    modified: 1785170895378
