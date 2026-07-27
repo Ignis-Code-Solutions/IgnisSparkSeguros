@@ -79,4 +79,15 @@ public class UsuarioController {
 
         usuarioRepository.deleteById(id);
     }
+    
+    /**
+     * Endpoint de login simplificado (sem verificação de senha/Spring Security).
+     * Retorna Status 200 (OK) se o usuário existir ou 401 (UNAUTHORIZED) se não for encontrado.
+     */
+    @PostMapping("/autenticar")
+    public ResponseEntity<?> logarSemSeguranca(@RequestBody Usuario usuarioLogin) {
+        return usuarioRepository.findByUsuario(usuarioLogin.getUsuario())
+            .map(usuario -> ResponseEntity.ok(usuario))
+            .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+    }
 }
