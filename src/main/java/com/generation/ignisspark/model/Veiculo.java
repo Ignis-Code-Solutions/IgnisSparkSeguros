@@ -2,12 +2,8 @@ package com.generation.ignisspark.model;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -49,6 +45,10 @@ import jakarta.validation.constraints.Size;
 
 	@NotNull(message = "O valor de tabela é obrigatório!")
 	private BigDecimal valorTabela;
+
+    @ManyToOne
+    @JsonIgnoreProperties("veiculos")
+    private Cliente cliente;
 
 	public Long getId() {
 		return id;
@@ -105,6 +105,13 @@ import jakarta.validation.constraints.Size;
 	public void setValorTabela(BigDecimal valorTabela) {
 		this.valorTabela = valorTabela;
 	}
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
 	
 }
