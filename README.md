@@ -80,6 +80,7 @@ A solução busca unir **tecnologia, mobilidade elétrica e proteção**, oferec
 <div align="center">
 
 ​    <img src="https://ik.imagekit.io/phcarneiro9/image.png" alt="Ignis Spark" width="600">
+<div/>
 
 # 5 - 🚀 Tecnologias Utilizadas
 
