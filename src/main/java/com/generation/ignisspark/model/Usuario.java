@@ -1,10 +1,17 @@
 package com.generation.ignisspark.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -38,6 +45,14 @@ public class Usuario {
 	private String foto;
 	
 	private String tipo; // ADMIN, CLIENTE, CORRETOR
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<Cliente> cliente;
+
+	// Construtor padrão
+	public Usuario() {
+	}
 
 	public Long getId() {
 		return id;
@@ -87,4 +102,11 @@ public class Usuario {
 		this.tipo = tipo;
 	}
 
+	public List<Cliente> getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(List<Cliente> cliente) {
+		this.cliente = cliente;
+	}
 }
