@@ -21,7 +21,7 @@
 
 ---
 
-# 1 - 📋 Descrição
+# 1. 📋 Descrição
 
 O **Ignis Spark Seguros** é uma API REST desenvolvida para oferecer uma solução moderna e flexível de **seguros para veículos elétricos**, como 🚲 bicicletas, 🛴 patinetes, 🏍️ motos e 🚗 carros elétricos.
 
@@ -33,9 +33,11 @@ A solução busca unir **tecnologia, mobilidade elétrica e proteção**, criand
 
 ---
 
-# 2 - 🎯 Sobre a API
+# 2. 🎯 Sobre a API
 
-## 2.1 - ⚡ Principais Funcionalidades
+
+
+## 2.1⚡ Principais Funcionalidades
 
 * 🚗 Seguros adaptados a diferentes tipos de veículos elétricos;
 * 📅 Modalidades de seguro diário e por trajeto;
@@ -48,35 +50,17 @@ A solução busca unir **tecnologia, mobilidade elétrica e proteção**, criand
 
 ---
 
-# 3 - 📦 Entidades
+# 3. 📦 Diagrama de Classes
 
-### 👥 Cliente
+<div align="center">
+  <img src="https://ik.imagekit.io/carlosTeste/Classes%20usuarios.png" alt="Diagrama de Entidades - Ignis Spark" width="600">
+</div>
 
-* `id`, `nome`, `cpf`, `data_nascimento`;
-* `telefone`, `email`, `endereco`;
-* `usuario_id`.
 
-### 📄 Apólice
-
-* `id`, `numero_apolice`;
-* `data_inicio`, `data_fim`;
-* `tipo_cobertura`, `valor_seguro`;
-* `status`, `cliente_id`, `veiculo_id`.
-
-### 👤 Usuário
-
-* `id`, `nome`, `email`, `senha`;
-* `foto`, `tipo`.
-
-### 🚗 Veículo
-
-* `id`, `tipo`, `marca`, `modelo`;
-* `ano_fabricacao`, `placa`;
-* `valor_tabela`, `cliente_id`.
 
 ---
 
-# 4 - 🔗 Diagrama de Entidades
+# 4. 🔗 Diagrama Entidade-Relacionamento (DER)
 
 <div align="center">
   <img src="https://ik.imagekit.io/phcarneiro9/image.png" alt="Diagrama de Entidades - Ignis Spark" width="600">
@@ -84,7 +68,7 @@ A solução busca unir **tecnologia, mobilidade elétrica e proteção**, criand
 
 ---
 
-# 5 - 🚀 Tecnologias Utilizadas
+# 5. 🚀 Tecnologias Utilizadas
 
 | Item              | Tecnologia                      |
 | ----------------- | ------------------------------- |
@@ -98,7 +82,7 @@ A solução busca unir **tecnologia, mobilidade elétrica e proteção**, criand
 
 ---
 
-# 6 - ▶️ Como Executar o Projeto
+# 6. ▶️ Como Executar o Projeto
 
 ## 1️⃣ Clone o repositório
 
@@ -153,7 +137,7 @@ mvn spring-boot:run
 
 ---
 
-# 7 - 👥 Equipe
+# 7. 👥 Equipe
 
 A equipe **Ignis Code Solutions** é formada por estudantes do **Bootcamp Java Full Stack da Generation Brasil**, com foco na aplicação prática de **Java, Spring Boot, APIs REST, arquitetura em camadas e banco de dados**, utilizando boas práticas de desenvolvimento, trabalho em equipe e metodologias ágeis.
 
