@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -48,8 +49,8 @@ public class Apolice {
 	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "veiculo_id")
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "veiculo_id", unique = true)
 	private Veiculo veiculo;
 
 	public Long getId() {
