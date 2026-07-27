@@ -13,7 +13,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
@@ -53,7 +52,6 @@ public class Cliente {
 	@Size(min = 10, max = 255, message = "O atributo endereço deve ter no mínimo 10 e no máximo 255 caracteres")
 	private String endereco;
 
-	@ManyToOne
 	@JoinColumn(name = "usuario_id")
 	@JsonIgnoreProperties("cliente")
 	private Usuario usuario;
