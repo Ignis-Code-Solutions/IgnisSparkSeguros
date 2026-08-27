@@ -32,7 +32,7 @@ public class UsuarioController {
     private UsuarioRepository usuarioRepository;
 
     // Listar todos os usuários
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Usuario>> getAll() {
         return ResponseEntity.ok(usuarioRepository.findAll());
     }
@@ -52,39 +52,27 @@ public class UsuarioController {
     }
 
     // Cadastrar novo usuário
-    @PostMapping
+    @PostMapping("/cadastrar")
     public ResponseEntity<Usuario> post(@Valid @RequestBody Usuario usuario) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(usuarioRepository.save(usuario));
     }
 
     // Atualizar usuário existente
-    @PutMapping
+    @PutMapping("/atualizar")
     public ResponseEntity<Usuario> put(@Valid @RequestBody Usuario usuario) {
         return usuarioRepository.findById(usuario.getId())
                 .map(resposta -> ResponseEntity.status(HttpStatus.OK)
                         .body(usuarioRepository.save(usuario)))
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
-
-    // Deletar usuário por ID
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
-        Optional<Usuario> usuario = usuarioRepository.findById(id);
-
-        if (usuario.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        }
-
-        usuarioRepository.deleteById(id);
-    }
+    
     
     /**
      * Endpoint de login simplificado (sem verificação de senha/Spring Security).
      * Retorna Status 200 (OK) se o usuário existir ou 401 (UNAUTHORIZED) se não for encontrado.
      */
-    @PostMapping("/autenticar")
+    @PostMapping("/logar")
     public ResponseEntity<?> logarSemSeguranca(@RequestBody Usuario usuarioLogin) {
         return usuarioRepository.findByUsuario(usuarioLogin.getUsuario())
             .map(usuario -> ResponseEntity.ok(usuario))

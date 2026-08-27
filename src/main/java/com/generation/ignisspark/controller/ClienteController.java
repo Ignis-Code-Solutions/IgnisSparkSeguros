@@ -31,7 +31,7 @@ public class ClienteController {
 	@Autowired
 	private ClienteRepository clienteRepository;
 	
-	@GetMapping
+	@GetMapping("/all")
 	public ResponseEntity<List<Cliente>> getAll(){ 
 		return ResponseEntity.ok(clienteRepository.findAll());
 	}
@@ -53,12 +53,12 @@ public class ClienteController {
 		return ResponseEntity.ok(clienteRepository.findAllByNomeContainingIgnoreCase(cpf));
 	}
 	
-	@PostMapping
+	@PostMapping("/cadastrar")
 	public ResponseEntity<Cliente> post(@Valid @RequestBody Cliente cliente){
 		return ResponseEntity.status(HttpStatus.CREATED).body(clienteRepository.save(cliente));
 	}
 	
-	@PutMapping
+	@PutMapping("/atualizar")
 	public ResponseEntity<Cliente> put(@Valid @RequestBody Cliente cliente){
 		if(clienteRepository.existsById(cliente.getId()))
 		return ResponseEntity.ok(clienteRepository.save(cliente));
@@ -66,7 +66,7 @@ public class ClienteController {
 	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/deletar/{id}")
 	public void delete(@PathVariable Long id) {
 		Optional<Cliente> cliente = clienteRepository.findById(id);
 		
