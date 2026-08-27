@@ -26,7 +26,7 @@ public class VeiculoController {
     @Autowired
     private VeiculoRepository veiculoRepository;
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Veiculo>> getAll() {
 
         return ResponseEntity.ok(veiculoRepository.findAll());
@@ -40,7 +40,7 @@ public class VeiculoController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/cadastrar")
     public ResponseEntity<Veiculo> post(
             @Valid @RequestBody Veiculo veiculo) {
 
@@ -48,7 +48,7 @@ public class VeiculoController {
                 .body(veiculoRepository.save(veiculo));
     }
 
-    @PutMapping
+    @PutMapping("/atualizar")
     public ResponseEntity<Veiculo> put(
             @Valid @RequestBody Veiculo veiculo) {
 
@@ -68,7 +68,7 @@ public class VeiculoController {
         );
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deletar/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
 
         Optional<Veiculo> veiculo =

@@ -3,6 +3,8 @@ package com.generation.ignisspark.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -47,10 +49,12 @@ public class Apolice {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cliente_id")
+	@JsonIgnoreProperties("apolice")
 	private Cliente cliente;
 
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "veiculo_id", unique = true)
+	@JsonIgnoreProperties("apolice")
 	private Veiculo veiculo;
 
 	public Long getId() {

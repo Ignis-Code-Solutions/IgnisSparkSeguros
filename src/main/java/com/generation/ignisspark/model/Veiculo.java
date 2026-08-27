@@ -47,7 +47,7 @@ import jakarta.validation.constraints.Size;
 	private BigDecimal valorTabela;
 
     @ManyToOne
-    @JsonIgnoreProperties("veiculos")
+    @JsonIgnoreProperties("veiculo")
     private Cliente cliente;
 
 	public Long getId() {

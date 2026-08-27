@@ -33,7 +33,7 @@ public class ApoliceController {
 	@Autowired
 	private ApoliceService apoliceService;
 
-	@GetMapping
+	@GetMapping("/all")
 	public ResponseEntity<List<Apolice>> getAll() {
 		return ResponseEntity.ok(apoliceRepository.findAll());
 	}
@@ -45,13 +45,13 @@ public class ApoliceController {
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 
-	@PostMapping
+	@PostMapping("/cadastrar")
 	public ResponseEntity<Apolice> post(@Valid @RequestBody Apolice apolice) {
 		apolice.setValorSeguro(apoliceService.calcularValorFinal(apolice));
 		return ResponseEntity.status(HttpStatus.CREATED).body(apoliceRepository.save(apolice));
 	}
 
-	@PutMapping
+	@PutMapping("/atualizar")
 	public ResponseEntity<Apolice> put(@Valid @RequestBody Apolice apolice) {
 		return apoliceRepository.findById(apolice.getId())
 				.map(resposta -> {
@@ -61,7 +61,7 @@ public class ApoliceController {
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/deletar/{id}")
 	public ResponseEntity<?> delete(@PathVariable Long id) {
 		Optional<Apolice> apolice = apoliceRepository.findById(id);
 

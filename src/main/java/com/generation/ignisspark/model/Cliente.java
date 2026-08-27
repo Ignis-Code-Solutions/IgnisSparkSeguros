@@ -30,7 +30,7 @@ public class Cliente {
 	
 	@NotNull(message = "O atributo data de nascimento é obrigatório!")
 	@JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate data_nascimento;
+    private LocalDate dataNascimento;
 	
 	@NotBlank(message = "O atributo telefone é obrigatório!")
 	@Size(min = 11, max = 15, message = "O atributo telefone deve ter no mínimo 11 e no máximo 15 caracteres")
@@ -97,12 +97,12 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
-	public LocalDate getData_nascimento() {
-		return data_nascimento;
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
 	}
 
-	public void setData_nascimento(LocalDate data_nascimento) {
-		this.data_nascimento = data_nascimento;
+	public void setDataNascimento(LocalDate data_nascimento) {
+		this.dataNascimento = data_nascimento;
 	}
 
 	public String getTelefone() {
