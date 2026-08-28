@@ -49,12 +49,12 @@ public class Apolice {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cliente_id")
-	@JsonIgnoreProperties("apolice")
+	@JsonIgnoreProperties({"apolice", "veiculo"})
 	private Cliente cliente;
 
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "veiculo_id", unique = true)
-	@JsonIgnoreProperties("apolice")
+	@JsonIgnoreProperties({"apolice", "cliente"})
 	private Veiculo veiculo;
 
 	public Long getId() {

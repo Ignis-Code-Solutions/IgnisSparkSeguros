@@ -50,11 +50,11 @@ public class Cliente {
     private Usuario usuario;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties(value = "cliente", allowSetters = true)
+	@JsonIgnoreProperties(value = {"cliente", "veiculo"}, allowSetters = true)
 	private List<Apolice> apolice;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties(value = "cliente", allowSetters = true)
+	@JsonIgnoreProperties(value = {"cliente", "apolice"}, allowSetters = true)
 	private List<Veiculo> veiculo;
 
 	public Long getId() {

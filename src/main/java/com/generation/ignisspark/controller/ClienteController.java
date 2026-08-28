@@ -43,14 +43,14 @@ public class ClienteController {
 				.orElse(ResponseEntity.notFound().build()); 
 	}
 	
-	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Cliente>> getAllByCPF(@PathVariable String nome){ 
-		return ResponseEntity.ok(clienteRepository.findAllByCpfContainingIgnoreCase(nome));
+	@GetMapping("/cpf/{cpf}")
+	public ResponseEntity<List<Cliente>> getAllByCPF(@PathVariable String cpf){ 
+		return ResponseEntity.ok(clienteRepository.findAllByCpfContainingIgnoreCase(cpf));
 	}
 	
-	@GetMapping("/cpf/{cpf}")
-	public ResponseEntity<List<Cliente>> getAllByNome(@PathVariable String cpf){ 
-		return ResponseEntity.ok(clienteRepository.findAllByNomeContainingIgnoreCase(cpf));
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Cliente>> getAllByNome(@PathVariable String nome){ 
+		return ResponseEntity.ok(clienteRepository.findAllByNomeContainingIgnoreCase(nome));
 	}
 	
 	@PostMapping("/cadastrar")
