@@ -6,6 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -51,10 +52,12 @@ public class Cliente {
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties(value = {"cliente", "veiculo"}, allowSetters = true)
+	@Schema(hidden = true)
 	private List<Apolice> apolice;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties(value = {"cliente", "apolice"}, allowSetters = true)
+	@Schema(hidden = true)
 	private List<Veiculo> veiculo;
 
 	public Long getId() {
